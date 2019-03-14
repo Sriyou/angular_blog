@@ -1,0 +1,8 @@
+<li class="list-group-item" [ngClass]="{'list-group-item':true, 'list-group-item-success':ifLoveIsHigh(), 'list-group-item-danger':ifLoveIsLow()}">
+  <h3>{{ postTitle }}</h3>
+  <p>{{ postContent }}</p>
+  <button class="btn btn-success" (click)="addLike()">Love it</button>
+  <button class="btn btn-danger" (click)="removeLike()">Don't love it</button>
+  <p class="nlove"><span class="glyphicon glyphicon-heart"></span> {{ postLove }}</p>
+  <p class="date">{{ postDate | date:'EEEE d LLLL y' }}</p>
+</li>
